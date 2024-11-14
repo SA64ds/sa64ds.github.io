@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>SA64</title>
+   <title>Streaming | SA64</title>
    <link rel="stylesheet" href="reset.css">
    <link rel="stylesheet" href="main.css">
 </head>
@@ -25,26 +25,31 @@
       </header>
 
       <main>
-         <img src="images/sa64header.png" class="headerimage">
-         <p>I'm just a dude that likes Mario games, nothing special.</p>
+         <p>I stream a variety of content on YouTube and Twitch every Friday at 3pm EST.</p>
 
-         <h1>Facts about me</h1>
-         <ul>
-            <li>I like to play video games
-            <li> My favorite franchise is Super Mario (if you somehow can't tell)
-            <li>I like to draw pixel art, particularly in with the limitations of the NES or Game Boy Color (some examples are included below)
-         </ul>
-         <h1>Pixel Art Examples</h1>
-         <section class="pixelpreview">
-            <img src="images/car.png" alt="Car from Garn47 in the style of SMB1">
-            <img src="images/superplayer.png" alt="You're a Super Player!">
-            <img src="images/week1nesremix.png" alt="FNF Week 1 Nes Remix">
-         </section>
+         <twitch>
+            <!-- Add a placeholder for the Twitch embed -->
+            <div id="twitch-embed"></div>
+
+            <!-- Load the Twitch embed JavaScript file -->
+            <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+            <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+            <script type="text/javascript">
+               new Twitch.Embed("twitch-embed", {
+                  width: 854,
+                  height: 480,
+                  channel: "sa64ds",
+               });
+            </script>
+         </twitch>
+
+         <h1>Stream Schedule</h1>
+         Work in progress
       </main>
       <footer>
          <p>©SA64ds 2023-2024</p>
       </footer>
    </div>
-
 </body>
 </html>
