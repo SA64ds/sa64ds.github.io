@@ -29,10 +29,9 @@ nav ul {
 }
 
 nav li {
+   font-family: SM64HUDFont;
    margin: 3px;
 }
-
-nav a {color: white;}
 
 body {
    background-image: url(images/sa64-bg.png);
@@ -42,12 +41,20 @@ body {
 .wrapper {
    font-family: SM64SignFont;
    color: white;
+   font-size: 110%;
    background-color: rgba(0, 0, 0, 0.7);
    background-blend-mode: multiply;
    max-width: 960px;
    min-width: 400px;
    margin: 1rem auto;
 }
+.wrapper a {
+   color: white;
+}
+.wrapper a:hover {
+   color: #5182ff;
+}
+
 
 main {
    margin: 1rem;
@@ -64,19 +71,23 @@ footer {
 }
 
 h1 {
+   color: #5182ff;
    font-family: SM64HUDFont;
-   font-size: 200%;
+   font-size: 250%;
    margin-top: 1rem;
 }
 h2 {
+   color: #4141ff;
    font-family: SM64HUDFont;
    font-size: 150%;
    margin-top: 1rem;
    border-bottom: 1px white solid;
+   margin-bottom: 1rem;
 }
 h3 {
+   color: #4141ff;
    font-family: SM64HUDFont;
-   font-size: 125%;
+   font-size: 115%;
    margin-top: 1rem;
 }
 
@@ -127,6 +138,14 @@ gallery img {margin-top: 5px;}
    text-align: center;
    line-height: 1
 }
+
+.transparentimage {
+   background-color: grey;
+}
+
+gallery figure:hover {background-color: black}
+
+.ps135:hover {background-color: black}
 
 /* TABLET Media Query
 ------------------------------------*/
