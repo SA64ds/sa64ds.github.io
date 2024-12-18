@@ -19,9 +19,6 @@ header {
    padding: .5rem 1rem;
 }
 
-nav {
-}
-
 nav ul {
    list-style-type: none;
    display: flex;
@@ -30,7 +27,16 @@ nav ul {
 
 nav li {
    font-family: SM64HUDFont;
+   font-size: 25px;
    margin: 3px;
+   background-color: #4141ff;
+   padding: 4px;
+   border-radius: 8px;
+}
+
+nav li:hover {
+   background-color: black;
+   color: #5182ff;
 }
 
 body {
@@ -41,7 +47,7 @@ body {
 .wrapper {
    font-family: SM64SignFont;
    color: white;
-   font-size: 110%;
+   font-size: 120%;
    background-color: rgba(0, 0, 0, 0.7);
    background-blend-mode: multiply;
    max-width: 960px;
@@ -54,7 +60,6 @@ body {
 .wrapper a:hover {
    color: #5182ff;
 }
-
 
 main {
    margin: 1rem;
@@ -71,13 +76,13 @@ footer {
 }
 
 h1 {
-   color: #5182ff;
+   color: #4141ff;
    font-family: SM64HUDFont;
    font-size: 250%;
    margin-top: 1rem;
 }
 h2 {
-   color: #4141ff;
+   color: #5182ff;
    font-family: SM64HUDFont;
    font-size: 150%;
    margin-top: 1rem;
@@ -85,10 +90,25 @@ h2 {
    margin-bottom: 1rem;
 }
 h3 {
-   color: #4141ff;
+   color: #5182ff;
    font-family: SM64HUDFont;
    font-size: 115%;
    margin-top: 1rem;
+}
+
+.warning {
+   margin-top: 1rem;
+   padding: 10px;
+   background-color: black;
+   background-blend-mode: color;
+}
+.warning h1 {
+   margin-top: 5px;
+   color: red;
+}
+.warning h3{
+   margin-top: 5px;
+   color: red;
 }
 
 .pixel-preview {
@@ -140,6 +160,7 @@ gallery img {margin-top: 5px;}
 }
 
 .transparentimage {
+   padding: 5px;
    background-color: grey;
 }
 
@@ -161,6 +182,10 @@ gallery figure:hover {background-color: black}
    .wrapper {
       width: 100%;
       margin: 0;
+   }
+
+   nav ul {
+      flex-direction: column;
    }
 
    .gallery {
