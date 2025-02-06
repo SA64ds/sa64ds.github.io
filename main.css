@@ -116,8 +116,6 @@ h3 {
    display: flex;
 }
 
-img {max-width: 100%;}
-
 twitch-embed {
    display: block;
    margin: 0 auto; 
@@ -137,15 +135,18 @@ gallery {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    align-content: center;
-   gap: 5px
+   gap: 5px;
+   margin: 0 auto;
 }
 
 gallery p {
-   margin: 1rem 0;
    line-height: 1;
+   text-align: center;
 }
 
-gallery img {margin-top: 5px;}
+gallery img {
+   width: 250px;
+}
 
 .ps135 {
    margin-top: 5px;
@@ -172,7 +173,7 @@ gallery figure:hover {background-color: black}
 /* TABLET Media Query
 ------------------------------------*/
 @media (max-widith: 768px) {
-   .gallery {
+   gallery {
       grid-template-columns: 1fr 1fr;
    }
 }
@@ -189,8 +190,12 @@ gallery figure:hover {background-color: black}
       flex-direction: column;
    }
 
-   .gallery {
+   gallery {
       grid-template-columns: 1fr;
+   }
+
+   gallery img {
+      width: 150px;
    }
 
    main {font-size: 150%;}
