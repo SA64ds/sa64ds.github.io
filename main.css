@@ -11,6 +11,25 @@
    font-style: normal;
 }
 
+.wrapper {
+   font-family: SM64SignFont;
+   color: white;
+   font-size: 100%;
+   background-color: rgba(0, 0, 0, 0.75);
+   background-blend-mode: multiply;
+   max-width: 960px;
+   min-width: 400px;
+   margin: 1rem auto;
+}
+
+.wrapper a {
+   color: white;
+   transition: ease 0.25s;
+}
+.wrapper a:hover {
+   color: #5182ff;
+}
+
 header {
    background-color: #2800ba;
    display: flex;
@@ -32,6 +51,7 @@ nav li {
    background-color: #4141ff;
    padding: 4px;
    border-radius: 8px;
+   transition: ease 0.5s;
 }
 
 nav li:hover {
@@ -42,23 +62,6 @@ nav li:hover {
 body {
    background-image: url(images/sa64-bg.png);
    background-size: 10%
-}
-
-.wrapper {
-   font-family: SM64SignFont;
-   color: white;
-   font-size: 120%;
-   background-color: rgba(0, 0, 0, 0.7);
-   background-blend-mode: multiply;
-   max-width: 960px;
-   min-width: 400px;
-   margin: 1rem auto;
-}
-.wrapper a {
-   color: white;
-}
-.wrapper a:hover {
-   color: #5182ff;
 }
 
 main {
