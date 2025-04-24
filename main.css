@@ -29,7 +29,6 @@ body {
    background-color: rgba(0, 0, 0, 0.75);
    background-blend-mode: multiply;
    width: 90%;
-   min-width: 400px;
    margin: 1rem auto;
 }
 
@@ -132,6 +131,8 @@ h3 {
    margin-top: 1rem;
 }
 
+img {image-rendering: pixelated;}
+
 .warning {
    margin-top: 1rem;
    margin-bottom: 1rem;
@@ -169,13 +170,14 @@ main li {
    margin: 0 auto;
 }
 
+.smooth {image-rendering: initial;}
+
 .button {
    font-family: SM64HUDFont;
    text-align: center;
    margin: 3px;
    padding: 8px;
    background-color: #4141ff;
-   padding: 8px;
    border-radius: 8px;
    transition: ease 0.5s;
 }
@@ -187,6 +189,7 @@ main li {
 
 .button a {
    text-decoration: none;
+   display: block;
 }
 
 .backtotop {
@@ -210,25 +213,30 @@ main li {
 /* Gallery */
 gallery {
    display: grid;
-   grid-template-columns: 2fr 1fr;
-   align-content: center;
-   gap: 5px;
-   margin: 0 auto;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 1rem;
 }
 
-gallery p {
-   line-height: 1;
+section {
+   display: grid;
+   grid-template-rows: 1fr 0.25fr;
+   justify-content: center;
+   text-align: center;
 }
 
-gallery img {
-   height: 300px;
-   margin: 0 auto;
+section img {
+   grid-row: 1;
+   width: 100%;
+   max-width: 400px;
+   margin: auto;
 }
+
+.description {display: none;}
 
 .ps135 {
    display: grid;
    grid-template-columns: 1fr 1fr;
-   width: 400px;
+   margin: 0 auto;
 }
 
 .transparentimage {
@@ -257,8 +265,16 @@ project img {
 ------------------------------------*/
 @media only screen and (max-width: 899px) {
    .wrapper {
-      max-width: 90%;
+      width: 95%;
       margin: 0 auto;
+   }
+
+   header {
+      flex-direction: column;
+   }
+
+   header img {
+      width: 20%;
    }
 
    main {
@@ -271,7 +287,10 @@ project img {
 
    gallery img {
       height: 100%;
-      width: 500px;
+   }
+
+   section {
+      grid-template-columns: 1fr;
    }
 
    .ps135 img {
@@ -287,7 +306,6 @@ project img {
    }
 
    project {
-      display: grid;
       grid-template-columns: 1fr;
    }
 
@@ -305,12 +323,8 @@ project img {
       margin: 0;
    }
 
-   header {
-      flex-direction: column;
-   }
-
    header img {
-      width: 200px;
+      width: 50%;
    }
 
    nav ul {
@@ -337,7 +351,6 @@ project img {
 
    gallery img {
       height: 100%;
-      width: 400px;
    }
 
    .ps135 {
